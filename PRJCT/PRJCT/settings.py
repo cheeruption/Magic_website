@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'PRJCT.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'magicdb',
+        'NAME': 'magicdb', #POSTGRES IS CASE INSENSITIVE!
         'USER': 'magic_admin',
         'PASSWORD': '12345',
         'HOST': 'localhost',
