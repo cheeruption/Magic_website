@@ -25,7 +25,7 @@ SECRET_KEY = '!!zl*miv#b)ml!j8d^i3ez7bkohbi+3lv#u%ew14jb+3sp^y!k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mywebsite.ru','localhost']
+ALLOWED_HOSTS = ['46.101.194.35','localhost']
 
 
 # Application definition
