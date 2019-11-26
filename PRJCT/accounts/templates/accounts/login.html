@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		1Drop | Главная
+	</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}">
+</head>
+<body>
+	<header>
+
+		<div class = 'header_container'>
+			<div class="quote">
+				<div class="quote_text">ВСЁ ЧТО НУЖНО <br> ДЛЯ <br> КОМФОРТНОЙ <br> ПОБЕДЫ В <br> MAGIC</div>
+				<div class='quote_sign'></div>
+			</div>
+			<div class="header_logo_nav">
+				<div class="head_nav">
+					<input type="text" placeholder="CARD SEARCH" name="crd_srch">
+					<ul class='buttons'>
+						<li><a href="{% url 'main:main' %}">Главная</a></li>
+						<li><a href="{% url 'products:products' %}">Products</a></li>
+						<li><a href="">Синглы</a></li>
+						<li><a href="">Дисплеи</a></li>	
+						<li><a href="{% url 'main:about' %}">О нас</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class='main_container'>
+			<div class="main_head">
+				<div class="product_header">LOGIN</div>
+			</div>
+			<p>
+			</p>
+			<div class="about_info">
+				{% include 'form.html' with form=form %}
+			</div>
+		</div>	
+		<div class="social_big">
+			<div class="big_1"></div>
+			<div class="big_2"></div>
+			<div class="big_3"></div>
+		</div>	
+
+		
+	</main>
+
+	<footer>
+
+		<div class="footer_units">
+			<div class="unit">
+				<div class="footer_unit_content">
+					<a href="#">Guilds of Ravnica</a>
+					<a href="#">Core Set 2019</a>
+					<a href="#">Dominaria</a>
+				</div>
+			</div>
+			<div class="unit unit1">
+				<div class="footer_unit_content">
+					<a href="#">Rivals of Ixalan</a>
+					<a href="#">Modern Masters</a>
+					<a href="#">Shadows Over Innistrad</a>
+				</div>
+			</div>
+			<div class="unit unit2">
+				<div class="footer_unit_content">
+					<a href="#">Eldritch Moon</a>
+					<a href="#">Kaladesh</a>
+					<a href="#">Aether Revolt</a>
+				</div>
+			</div>
+			<div class="about">
+				<div class="about_head">Информация
+				</div>
+				<div class="footer_unit_content">
+					<a href="#">Контакты</a>
+					<a href="#">Доставка</a>
+					<a href="#">О Нас</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="copyrights">
+			&copy; 1DROP. All rights reserved. 2018
+		</div>	
+	</footer>
+</body>
+</html>

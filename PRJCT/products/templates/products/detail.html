@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> {{ object }} </h1>
+	{% if object.title == 'Tireless Tracker' %}
+		<div> {{object.snippet}} </div>
+		<img src="/static/main/mtg_sources/tireless.jpg">
+	{% endif %}
+</body>
+</html>

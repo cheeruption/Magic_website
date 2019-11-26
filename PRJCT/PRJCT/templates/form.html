@@ -1,0 +1,23 @@
+<form action="" method="POST" enctype=multipart/form-data>
+	{% csrf_token %}
+
+<!-- 	{% for err in form.mot_field_errors %}
+	<span>{{ err }}</span>
+	{% endfor %} -->
+
+
+	{% for field in form %}
+	<div>
+		{{form.name}}
+		{{field.label}}
+		{{field}}
+
+<!-- 		{% for err in field.errors %}
+		{{ err }}
+		{% endfor %} -->
+	</div>
+
+	{% endfor %}
+	
+	<input type="submit">
+</form>

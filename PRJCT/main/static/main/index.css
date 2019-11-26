@@ -1,0 +1,368 @@
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("../fonts/BebasNeue Bold.otf");
+}
+@font-face {
+	font-family: "Bebas Neue Reg";
+	src: url("../fonts/BebasNeue Regular.otf");
+}
+@font-face {
+	font-family: "PT Sans Caption";
+	src: url("../fonts/PTSans.ttc");
+}
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeue.dfont");
+}
+
+header {
+	height: 280px;
+	width: 100%;
+	/*float: left;*/
+	background: url("mtg_sources/header_img.png") no-repeat;
+	background-size: 100%;
+	padding: 0px;
+	margin: 0px;
+	min-width: 1250px;
+/*	margin-bottom: 100px;*/
+}
+.header_container {
+	/*border-style: solid;*/
+	/*border-color: red;*/
+	height: 100%;
+	width: 1200px;
+	background: url("mtg_sources/logo.png") no-repeat 80px 38px;
+	background-size: 15%;
+	margin: 0 auto;
+	/*position: relative;*/
+}
+@media (max-width: 1200px){
+	.quote {
+		display: none;
+	}
+}
+.quote {
+	position: absolute;
+	top: 70px;
+	right: 70px;
+	color: #f2efe2;
+}
+.quote_text {
+	font-family: "Bebas Neue Reg";
+	font-size: 24px;
+	line-height: 30px;
+}
+.quote_sign {
+	position: relative;
+	padding:20px;
+	bottom:20px;
+	left:55px;
+	background: url(../mtg_sources/quotes.png) no-repeat;
+}
+.header_logo_nav {
+	margin: 0 auto;
+	/*margin-top: 3%;*/
+/*	border-color: yellow;
+	border-style: dashed;*/
+	width:700px;
+	height: 200px;
+}
+.head_nav {
+	position: relative;
+	top:15%;
+	height:70%;
+	float: right;
+
+}
+.head_nav input {
+	float: right;
+	margin-left: 100px;
+	padding:18px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 430px;
+	border-radius: 5px;
+	background-color: #f3f0e3;
+	border-style: none;
+	/*float: right;*/
+	font-family: "PT Sans Caption";
+	font-weight: 900;
+	font-size: 18px;
+}
+ul {
+	float: right;
+	display: inline-flex;
+	padding-top: 14px;
+}
+
+.buttons li{
+
+	list-style-type: none;
+}
+.buttons li a:hover {
+	background-color: #FBD032;
+	color:black;
+}
+.buttons li a{
+	color: #3D4953;
+/*	float: right;*/
+	margin-left: 20px;
+	background-color: #f3f0e3;
+	border-radius: 5px;
+	padding: 15px 18px;
+	padding-top: 17px;
+	/*margin-bottom: 30px;*/
+	font-family: "PT Sans Caption", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+
+}
+main {
+  min-height: 1600px;
+  width: 100%;
+  float: left;
+  font-family: "PT Sans Caption"
+}
+.main_container {
+	height: 1600px;
+	width:55%;
+	min-width: 750px;
+	background-color: #f3f0e3;
+	border-radius: 9px;
+	margin: 0 auto;
+	margin-top: -60px;
+}
+.main_head {
+	height: 40px;
+	width:92%;
+	padding-top: 37px;
+	margin: 0 auto;
+}
+.product_header {
+	font-family: "PT Sans Caption";
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 60px;
+	color: white;
+	text-align: left;
+	padding-left: 30px;
+	float: left;
+	height: 58px;
+	width: 380px;
+	background-color: #EF6352;
+	border-radius: 9px;
+}
+.filter {
+	font-family: "PT Sans Caption";
+	line-height: 60px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 900;	
+	display: inline-block;
+	float: right;
+	height: 58px;
+	width: 180px;
+	background-color: #FBD032;
+	border-radius: 9px;
+}
+.about_info p {
+	font-family: "HelveticaNeue";
+	line-height: 35px;
+	font-weight: 100;
+	margin-left: 60px;
+	margin-top: 45px;
+	font-size: 20px;
+
+}
+.about_info_login {
+	margin-top: 30px;
+.contact_us {
+	font-family: "HelveticaNeue";
+	line-height: 35px;
+	margin-top: 45px;
+	font-weight: 100px;
+	font-size: 20px;
+}
+.map_feedback_container {
+	margin-left: 60px;
+	width: 450px;
+	height: 1000px;
+	background-color: lightyellow;
+}
+.a_map {
+/*	width:450px;
+	height: 450px;*/
+	border-radius: 9px;
+/*	background-color: blue;
+	margin: 0px 0 0 0;*/
+}
+.map_feedback_container input{
+	margin-top: 10px;
+	display:block;
+	width: 450px;
+	border:none;
+	border-radius: 6px;
+}
+/*.map_fedback_container:last-child {
+	height: 450px;
+}*/
+.contact_input {
+	height: 30px;
+}
+.feedback_msg {
+	height:300px;
+}
+input[type='msg']::placeholder{
+	color: blue;
+}
+.products_container_1 {
+
+	margin: 0 auto;
+	margin-top: 37px;
+	width:690px;
+	height: 530px;
+}
+.products_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 37px;
+	width:92%;
+/*	min-width: 690px;*/
+	height: 270px;
+}
+.item_container_1 img {
+	height: 210px;
+	width: 150px;
+}
+.item_container img {
+	height: 210px;
+	width: 150px;
+}
+.item_container img:hover {
+	opacity: 0.9;
+}
+.item_container_1 img:hover {
+	opacity: 0.9;
+}
+.item_container_1 {
+	/*float:left;*/
+	float: left;
+	display: inline;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	/*height:270px;*/
+	/*width:50px;*/
+	/*margin-right: 38px;*/
+}
+.item_container_1:nth-child(4n) {
+	margin-right: 0;
+}
+.price_container {
+	border-radius: 4px;
+	margin-top: 10px;
+	background-color: #FBD032;
+	height: 46px;
+	width: 150px;
+}
+.price_container p {
+	position: relative;
+	top: 8px;
+	left: 18px;
+	display: inline;
+	font-family: "Bebas Neue Reg";
+	font-size: 25px;
+
+	padding-right: 7px;
+}
+.item_old_price {
+	color: red;
+	text-decoration: line-through;
+	font-size: 30px;
+	line-height: 38px;
+}
+.location {
+	margin-top: 20px;
+}
+.social_big {
+	margin: 0 auto;
+	margin-top: 30px;
+	height: 90px;
+	width:784px;
+	margin-bottom: 30px;
+}
+.big_1{
+	float:left;
+	padding: 45px 130.5px;
+	background-color: rgb(45, 60, 144);
+	border-radius: 9px 0px 0px 9px;
+}
+.big_2{
+	float:left;
+	padding: 45px 130.5px;
+	background-color: rgb(0,171,207);
+}
+.big_3{
+	float:left;
+	padding: 45px 130.5px;
+	background-color: rgb(0,127,222);
+	border-radius: 0px 9px 9px 0px;
+}
+footer {
+	min-width: 1000px;
+	clear: both;
+	margin: 0 auto;
+	width: 80%;
+	height: 120px;
+	border-radius: 20px 20px 0 0;
+	background-color: #fbd033;
+}
+
+.footer_units {
+	padding-top: 26px;
+	height:90px;
+	width: 60%;
+	margin: 0 auto;
+	font-family: "HelveticaNeue", sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+
+}
+.unit {
+	float:left;
+	margin-left: 25px;
+}
+.unit a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+.about {
+	text-align: right;
+	margin-top: -10px;
+	float: right;
+	width: 100px;
+}
+.about_head {
+	font-weight: bold;
+}
+.about a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+.copyrights {
+	background: #12091c;
+	height: 16px;
+	line-height: 19px;
+	color:white;
+	font-family: "Bebas Neue Reg";
+	font-size: 14px;
+	font-kerning: 10px;
+	padding: 3px 20px;
+}
