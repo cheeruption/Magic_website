@@ -105,7 +105,7 @@ DATABASES = {
         'USER': 'magic_admin',
         'PASSWORD': '12345',
         'HOST': 'localhost',
-        'PORT': '8000',
+        'PORT': '',
     }
 }
 
