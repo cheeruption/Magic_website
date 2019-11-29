@@ -19,7 +19,7 @@ header {
 	/*box-sizing: border-box;*/
 	height: 280px;
 	width: 100%; /*блок всегда подстраивается под размер экрана*/
-	background: url("../mtg_sources/header_img.png") no-repeat;
+	background: url("/mtg_sources/header_img.png") no-repeat;
 	background-size: cover;/*Замостить картинкой бэкграунд*/
 	/*min-width: 1200px;*/
 	/*margin:0px;*/
@@ -29,7 +29,7 @@ header {
 	height: 100%;
 	width: 60%;
 	padding: 0 20%;
-	background: url("../mtg_sources/logo.png") no-repeat 80px 38px;
+	background: url("/mtg_sources/logo.png") no-repeat 80px 38px;
 /*	background-size: auto auto;*/
 	background-position: 7% 15%;
 	/*position: relative;*/
@@ -59,7 +59,7 @@ header {
 	width:50px;
 	position: absolute;
 	left:55px;
-	background: url(../mtg_sources/quotes.png) no-repeat;
+	background: url(/mtg_sources/quotes.png) no-repeat;
 	background-size: auto auto;
 	top:120px;
 }
