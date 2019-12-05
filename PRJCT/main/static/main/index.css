@@ -19,7 +19,7 @@ header {
 	/*box-sizing: border-box;*/
 	height: 280px;
 	width: 100%; /*блок всегда подстраивается под размер экрана*/
-	background: url("static/main/mtg_sources/header_img.png") no-repeat;
+	background: url("/mtg_sources/header_img.png") no-repeat;
 	background-size: cover;/*Замостить картинкой бэкграунд*/
 	/*min-width: 1200px;*/
 	/*margin:0px;*/
