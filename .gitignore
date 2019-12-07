@@ -2,3 +2,4 @@ venv
 .idea/
 __pycache__
 .DS_Store
+vps command history.txt
