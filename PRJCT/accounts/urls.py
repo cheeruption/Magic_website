@@ -9,5 +9,5 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('', account_login, name='login'),
-    path('signup/', SignUpView.as_view(), name='signup')
+    path('signup/', SignUpView.as_view(), name='register')   
 ]
