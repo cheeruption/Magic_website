@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -51,7 +55,8 @@ INSTALLED_APPS = [
 #     'PAGE_SIZE': 25
 # }
 
-#переопределяем модель пользователя для гибкости
+#переопределяем модель пользователя для гибкости. Данный способ рекомендуется для всех проектов, важно делать это до создания миграций, т.к. иначе будет существовать 2 пользователя.
+#из приложения аккаунтс новая модель - AccountUser (которая базируется на встроенной модели AbstractUser)
 AUTH_USER_MODEL = 'accounts.AccountUser' 
 
 MIDDLEWARE = [

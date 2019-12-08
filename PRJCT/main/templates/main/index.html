@@ -8,3 +8,18 @@
 {% block page_title %}
 1Drop | Главная
 {% endblock %}
+
+
+{% block content %}
+<div class='logging'>
+	{% if user.is_authenticated %}
+	  Hi {{ user.username }}!
+	  <p><a href="{% url 'logout' %}">I'm leaving, bye!</a></p>
+	{% else %}
+	  <p>You are not logged in.</p>
+	  <a href="{% url 'accounts:login' %}">Log Me In!</a>
+	  <br>
+	  <a href="{% url 'accounts:signup' %}">Join the party!</a>
+	{% endif %}
+</div>
+{% endblock %}

@@ -19,7 +19,7 @@ header {
 	/*box-sizing: border-box;*/
 	height: 280px;
 	width: 100%; /*блок всегда подстраивается под размер экрана*/
-	background: url("/mtg_sources/header_img.png") no-repeat;
+	background: url("static/main/mtg_sources/header_img.png") no-repeat;
 	background-size: cover;/*Замостить картинкой бэкграунд*/
 	/*min-width: 1200px;*/
 	/*margin:0px;*/
@@ -368,4 +368,28 @@ footer {
 	font-size: 14px;
 	font-kerning: 10px;
 	padding: 3px 20px;
+}
+.logging {
+	height: 102px;
+	padding:15px;
+	background-color: #eee;
+	border-radius: 10px;
+
+	text-align: center;
+	width: 40%;
+	margin:0 auto;
+	margin-top: -60px;
+	margin-bottom: 100px;
+}
+.logging1 {
+	height: 500px;
+	padding:15px;
+	background-color: #eee;
+	border-radius: 10px;
+
+	text-align: center;
+	width: 90%;
+	margin:0 auto;
+	margin-top: -60px;
+	margin-bottom: 100px;
 }

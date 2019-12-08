@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from .forms import AccountUserForm
 from django.contrib.auth import authenticate, login
 from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView
+
+from .forms import CustomUserCreationForm
 
 # Create your views here.
 
@@ -26,3 +29,9 @@ def account_login(request):
 				return redirect(success_url)
 
 	return render(request, 'accounts/login.html', {'form':form})
+
+
+class SignUpView(CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy('accounts:login')
+    template_name = 'signup.html'
