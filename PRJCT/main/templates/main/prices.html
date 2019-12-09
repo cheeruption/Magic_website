@@ -1,0 +1,25 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block page_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}">
+{% endblock %}
+
+{% block page_title %}
+1Drop | Prices
+{% endblock %}
+
+{% block content %}
+<div class='logging1'>
+	<h2>Card Search</h2>
+	<form method="post">
+	  {% csrf_token %}
+	  {{ form.as_p }}
+	  <button type="submit">Search!</button>
+	</form>
+	{% if card %}
+		<h2>{{card}}</h2>
+	{% endif %}
+</div>
+
+{% endblock %}
