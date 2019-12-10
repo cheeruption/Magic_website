@@ -1,6 +1,6 @@
 from django.urls import path
 from accounts.views import account_login
-from accounts.views import SignUpView
+from .views import SignUpView
 # from .views import account_login
 
 

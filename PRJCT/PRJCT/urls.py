@@ -36,6 +36,6 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('accounts/', include('accounts.urls')),
     path('categories/',include('products.urls.categories')),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('accounts/', include('django.contrib.auth.urls')),
 #стандартная процедура добавления медиа, описанная в документации для доступа к файлам на лок машине
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

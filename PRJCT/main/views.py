@@ -18,7 +18,7 @@ def about(request):
     return render(request,'main/about.html')
 
 
-def search(request):
+def search_view(request):
     form = SearchForm() #вывести на экран форму так как она описана в .forms
     context = 'nothing_here yet... TRY TO INPUT SOMETHING!' #заглушка для контекста
 
