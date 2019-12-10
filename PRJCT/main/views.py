@@ -18,21 +18,20 @@ def about(request):
     return render(request,'main/about.html')
 
 def search_view(request):
-	return render(request,'main/about.html')
-# def search_view(request):
-#     form = SearchForm() #вывести на экран форму так как она описана в .forms
-#     context = 'nothing_here yet... TRY TO INPUT SOMETHING!' #заглушка для контекста
 
-#     if request.method == "POST": #если запрос к странице содержит ПОСТ запрос - идем по данному пути
-#         form = SearchForm(request.POST) #вытаскиваем объект формы
-#         if form.is_valid():
-#             context = form.cleaned_data.get('cardname').replace('','+')
-#             search_upd = f'https://api.scryfall.com/cards/named?fuzzy={context}'
-#             r = requests.get(search_upd)
-#             api_respond = r.json()
-#             context = api_respond.get('name')
+    form = SearchForm() #вывести на экран форму так как она описана в .forms
+    context = 'nothing_here yet... TRY TO INPUT SOMETHING!' #заглушка для контекста
 
-#     return render(request, "main/prices.html", {'card':context, 'form':form})
+    if request.method == "POST": #если запрос к странице содержит ПОСТ запрос - идем по данному пути
+        form = SearchForm(request.POST) #вытаскиваем объект формы
+        if form.is_valid():
+            context = form.cleaned_data.get('cardname').replace('','+')
+            search_upd = f'https://api.scryfall.com/cards/named?fuzzy={context}'
+            r = requests.get(search_upd)
+            api_respond = r.json()
+            context = api_respond.get('name')
+
+    return render(request, "main/prices.html", {'card':context, 'form':form})
 
 # поиск картинки по названию + перевод карты с ру на англ
 # SEARCHCARD = 'Fanat Fire'.replace(' ','+')
