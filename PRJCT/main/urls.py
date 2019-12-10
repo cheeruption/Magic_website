@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from main.views import main, about, search
+from main.views import main, about, search_view
 
 
 app_name = 'main'
@@ -8,5 +8,5 @@ app_name = 'main'
 urlpatterns = [
     path('', main, name = 'main'),
     path('about/', about, name = 'about'),
-    path('search/', search, name = 'search')
+    path('search/', search_view, name = 'search')
 ]
