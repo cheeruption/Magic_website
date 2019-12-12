@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block page_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}">
+{% endblock %}
+
+{% block page_title %}
+1Drop | Confirmation
+{% endblock %}
+
+{% block content %}
+<div class="logging">
+	{% if verdict == 'OK' %}
+		<h2>Confirmation Successfull</h2>
+	{% else %}
+		<h2>Confirmation Denied</h2>
+	{% endif %}
+</div>
+{% endblock %}

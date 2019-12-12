@@ -6,6 +6,8 @@ from django.views.generic.edit import CreateView
 
 from .forms import CustomUserCreationForm
 
+
+
 # Create your views here.
 
 def account_login(request):
