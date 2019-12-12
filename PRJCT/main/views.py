@@ -62,7 +62,7 @@ def confirm_view(request):
     sleep(10)
     r = requests.get(f'{BASE_URL}getUpdates',proxies=proxyDict)
     r.json()
-    verdict = r[updates][message][text]
+    verdict = r[result][message][text]
 
 
     return render(request,"main/confirm.html", {'verdict':verdict})
