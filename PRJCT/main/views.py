@@ -65,7 +65,7 @@ def confirm_view(request):
     r = requests.post(f'{BASE_URL}sendMessage',proxies=proxyDict,data=payload)
     sleep(10)
     r = requests.get(f'{BASE_URL}getUpdates',proxies=proxyDict)
-    verdict = r.[updates][text]
+    verdict = r[updates][text]
 
 
 	return render(request,"main/confirm.html", {'verdict':verdict})
