@@ -39,7 +39,7 @@ def search_view(request):
     return render(request, "main/prices.html", {'card':context, 'form':form})
 
 def confirm_view(request):
-	verdict = 'Successfull'
+    verdict = 'Successfull'
     http_proxy  = "socks5://retterproxy:Gorikbest123@kemper1t.ru:1081"
     https_proxy = "socks5://retterproxy:Gorikbest123@kemper1t.ru:1081"
     ftp_proxy   = "socks5://retterproxy:Gorikbest123@kemper1t.ru:1081"
