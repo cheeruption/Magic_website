@@ -8,6 +8,6 @@ app_name = 'main'
 urlpatterns = [
     path('', main, name = 'main'),
     path('about/', about, name = 'about'),
-    path('search/', search_view, name = 'search')
+    path('search/', search_view, name = 'search'),
     path('confirm/',confirm_view, name = 'confirm')
 ]
