@@ -68,7 +68,7 @@ def confirm_view(request):
     verdict = r[updates][text]
 
 
-	return render(request,"main/confirm.html", {'verdict':verdict})
+    return render(request,"main/confirm.html", {'verdict':verdict})
 
 # поиск картинки по названию + перевод карты с ру на англ
 # SEARCHCARD = 'Fanat Fire'.replace(' ','+')
