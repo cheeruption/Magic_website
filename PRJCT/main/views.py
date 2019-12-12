@@ -3,11 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import SearchForm
 import requests
-import re
-import telebot
-from telebot.types import Message
 import shutil
-from telebot import apihelper
 from time import sleep
 sleep(0.05)
 
