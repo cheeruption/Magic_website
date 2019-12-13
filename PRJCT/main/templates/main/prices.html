@@ -17,7 +17,7 @@
 	  {{ form.as_p }}
 	  <button type="submit">Search!</button>
 	</form>
-	{% if card %}
+	{% if card != 'nothing_here yet... TRY TO INPUT SOMETHING!' %}
 		<h2>{{card}}</h2>
 		<h2>{{price}}</h2>
 		<h2>{{price_foil}}</h2>
