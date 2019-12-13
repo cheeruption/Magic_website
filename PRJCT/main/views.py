@@ -35,6 +35,10 @@ def search_view(request):
                 context = api_respond['name']
                 price = api_respond['prices']['usd']
                 price_foil = api_respond['prices']['usd_foil']
+            else
+                context = 'Oops'
+                price = 'Цены пока нет'
+                price_foil = 'Цены на фойл пока нет'  
 
     return render(request, "main/prices.html", {'card':context, 'form':form, 'price':price, 'price_foil':price_foil})
 
