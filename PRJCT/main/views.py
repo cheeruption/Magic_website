@@ -22,8 +22,8 @@ def search_view(request):
 
     form = SearchForm() #вывести на экран форму так как она описана в .forms
     context = 'nothing_here yet... TRY TO INPUT SOMETHING!' #заглушка для контекста
-    search_upd = 'search_upd is empty'
-    api_respond = 'no api respond'
+    price = 'none'
+    price_foil = 'none'
     if request.method == "POST": #если запрос к странице содержит ПОСТ запрос - идем по данному пути
         form = SearchForm(request.POST) #вытаскиваем объект формы
         if form.is_valid():
@@ -32,8 +32,10 @@ def search_view(request):
             r = requests.get(search_upd)
             api_respond = r.json()
             context = api_respond.get('name')
+            price = api.respond.get('prices').get('usd')
+            price_foil = api.respond.get('prices').get('usd_foil')
 
-    return render(request, "main/prices.html", {'card':context, 'form':form, 'search_upd':search_upd, 'api_respond':api_respond})
+    return render(request, "main/prices.html", {'card':context, 'form':form, 'price':price, 'price_foil':price_foil})
 
 def confirm_view(request):
     verdict = 'Successfull'
