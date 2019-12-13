@@ -26,13 +26,13 @@ def search_view(request):
     if request.method == "POST": #если запрос к странице содержит ПОСТ запрос - идем по данному пути
         form = SearchForm(request.POST) #вытаскиваем объект формы
         if form.is_valid():
-            context = form.cleaned_data.get('cardname').replace('','+')
+            context = form.cleaned_data.get('cardname').replace(' ','+')
             search_upd = f'https://api.scryfall.com/cards/named?fuzzy={context}'
             r = requests.get(search_upd)
             api_respond = r.json()
             context = api_respond.get('name')
 
-    return render(request, "main/prices.html", {'card':context, 'form':form})
+    return render(request, "main/prices.html", {'card':context, 'form':form, 'search_upd':search_upd, 'api_respond':api_respond})
 
 def confirm_view(request):
     verdict = 'Successfull'
