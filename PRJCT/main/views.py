@@ -32,9 +32,9 @@ def search_view(request):
             r = requests.get(search_upd)
             api_respond = r.json()
             if api_respond.get('name'):
-                context = api_respond.get('name')
-                price = api_respond.get('prices').get('usd')
-                price_foil = api_respond.get('prices').get('usd_foil')
+                context = api_respond['name']
+                price = api_respond['prices']['usd']
+                price_foil = api_respond['prices']['usd_foil']
 
     return render(request, "main/prices.html", {'card':context, 'form':form, 'price':price, 'price_foil':price_foil})
 
