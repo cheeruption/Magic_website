@@ -31,9 +31,10 @@ def search_view(request):
             search_upd = f'https://api.scryfall.com/cards/named?fuzzy={context}'
             r = requests.get(search_upd)
             api_respond = r.json()
-            context = api_respond.get('name')
-            price = api_respond.get('prices').get('usd')
-            price_foil = api_respond.get('prices').get('usd_foil')
+            if api.respond.get('name'):
+                context = api_respond.get('name')
+                price = api_respond.get('prices').get('usd')
+                price_foil = api_respond.get('prices').get('usd_foil')
 
     return render(request, "main/prices.html", {'card':context, 'form':form, 'price':price, 'price_foil':price_foil})
 
