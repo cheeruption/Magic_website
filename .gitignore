@@ -3,3 +3,6 @@ venv
 __pycache__
 .DS_Store
 vps command history.txt
+*.pyc
+*.pyc
+PRJCT/db.sqlite3

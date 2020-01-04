@@ -46,6 +46,13 @@ INSTALLED_APPS = [
     'products',
     'images',
     'accounts',
+<<<<<<< HEAD
+    'chat'
+=======
+    'channels',
+    'chat',
+
+>>>>>>> cae4132ad16b80b141fa430c8de661be001f81a2
     # 'rest_framework'
 
 ]
@@ -90,29 +97,37 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'PRJCT.wsgi.application'
+ASGI_APPLICATION = 'PRJCT.routing.application'
 
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'magicproject', #POSTGRES IS CASE INSENSITIVE!
-        'USER': 'cheeruption',
-        'PASSWORD': 'whatislove',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'magicproject', #POSTGRES IS CASE INSENSITIVE!
+#         'USER': 'cheeruption',
+#         'PASSWORD': 'whatislove',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
