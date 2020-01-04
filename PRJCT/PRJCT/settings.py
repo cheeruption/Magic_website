@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'products',
     'images',
     'accounts',
+    'channels',
+    'chat',
+
     # 'rest_framework'
 
 ]
@@ -90,8 +93,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'PRJCT.wsgi.application'
+ASGI_APPLICATION = 'PRJCT.routing.application'
 
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
